@@ -1,0 +1,3 @@
+service{
+"sales.salesdb::customersalesdetails.customer" as "mycust";
+}

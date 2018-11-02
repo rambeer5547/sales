@@ -1,0 +1,18 @@
+namespace sales.salesdb;
+
+context customersalesdetails {
+    entity customer {
+        key customernum : String(10) not null;
+            name        : String(40);
+            city        : String(10);
+            region      : String(2);
+            country     : String(2);
+    };
+
+    entity customerorder {
+        key ordernum   : String(10);
+            customerid : String(10);
+            material   : String(10);
+            amount     : Decimal(10, 2);
+    };
+};

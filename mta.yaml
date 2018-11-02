@@ -1,0 +1,33 @@
+ID: sales
+_schema-version: '2.0'
+version: 0.0.1
+modules:
+  - name: salesdb
+    type: hdb
+    path: salesdb
+    requires:
+      - name: hdi_salesdb
+  - name: salesjs
+    type: nodejs
+    path: salesjs
+    provides:
+      - name: salesjs_api
+        properties:
+          url: '${default-url}'
+    requires:
+      - name: hdi_salesdb
+      - name: salesdb
+  - name: salesui5
+    type: html5
+    path: salesui5
+    requires:
+      - name: salesjs_api
+        group: destinations
+        properties:
+          name: salesjs
+          url: '~{url}'
+resources:
+  - name: hdi_salesdb
+    properties:
+      hdi-container-name: '${service-name}'
+    type: com.sap.xs.hdi-container

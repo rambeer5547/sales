@@ -1,0 +1,15 @@
+	{
+		"welcomeFile": "webapp/index.html",
+		"authenticationMethod": "none",
+		"routes": [{
+				"source": "(.*)(.xsjs)",
+				"destination": "salesjs"
+			},
+
+			{
+				"source": "(.*)(.xsodata)",
+				"destination": "salesjs"
+			}
+
+		]
+	}

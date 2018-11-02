@@ -1,0 +1,28 @@
+PROCEDURE "sales.salesdb.procedures::crecustomer" (
+	  IN  im_customernum  NVARCHAR(10),
+	       im_name        NVARCHAR(40),
+	       im_city        NVARCHAR(10),
+	       im_region      NVARCHAR(2),
+	       im_country     NVARCHAR(2),
+       OUT ex_error       NVARCHAR(100)
+   
+)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER AS
+   --DEFAULT SCHEMA <default_schema_name>
+   --READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   declare noc integer;
+   select count(*) into noc from "sales.salesdb::customersalesdetails.customer" where "customernum" = im_customernum;
+  if :noc>0 then
+  ex_error := 'ERROR: Customer' || :im_customernum || ' All ready exists!';
+  else
+  insert into "sales.salesdb::customersalesdetails.customer"values
+   (im_customernum,im_name,im_city,im_region,im_country);
+   end if;
+   
+   
+END

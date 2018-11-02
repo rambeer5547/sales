@@ -1,0 +1,6 @@
+service{
+"sales.salesdb::customersalesdetails.customer" as "cust" navigates ("customer_order" as "hisorders");
+"sales.salesdb::customersalesdetails.customerorder" as "ord";
+association "customer_order"  principal "cust"("cusotmernum") multiplicity "1" dependent "ord"("customerid") multiplicity "*"; 
+
+ }

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>salesui5</title>
+
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"salesui5.webapp": "./"}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--	<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "salesui5.salesui5"
+					})
+				}).placeAt("content");
+			});
+		</script>-->
+		<script>
+		sap.ui.localResources("sapui5");
+        var view = sap.ui.View({viewName:"customersales.veiew",type:sap.ui.core.mvc.ViewType.HTML});
+        view.placeAt("content");
+		</script>
+		
+	</head>
+
+	<body class="sapUiBody" role="application" >
+		<div id="content"></div>
+	</body>
+
+</html>
