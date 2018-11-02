@@ -12,31 +12,22 @@
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{"salesui5.webapp": "./"}'>
+			data-sap-ui-resourceroots='{"sap.ui.demo.salesui5": "./"}'>
 		</script>
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<!--	<script>
-			sap.ui.getCore().attachInit(function() {
-				new sap.m.Shell({
-					app: new sap.ui.core.ComponentContainer({
-						height : "100%",
-						name : "salesui5.salesui5"
-					})
-				}).placeAt("content");
+	
+    	<script>
+		sap.ui.getCore().attachInit(function() {
+			sap.ui.htmlview({
+				viewName : "sap.ui.demo.salesui5.view.customersales"
+				)}.placeAt("content")
 			});
-		</script>-->
-		<script>
-		sap.ui.localResources("sapui5");
-        var view = sap.ui.View({viewName:"customersales.veiew",type:sap.ui.core.mvc.ViewType.HTML});
-        view.placeAt("content");
 		</script>
 		
 	</head>
 
-	<body class="sapUiBody" role="application" >
-		<div id="content"></div>
+	<body class="sapUiBody" id="content">
+
 	</body>
 
 </html>
