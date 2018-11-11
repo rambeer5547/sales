@@ -12,22 +12,22 @@
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-resourceroots='{"sap.ui.demo.salesui5": "./"}'>
+			data-sap-ui-resourceroots='{"salesdemo.salesui5": "./"}'>
 		</script>
 
-	
-    	<script>
-		sap.ui.getCore().attachInit(function() {
-			sap.ui.htmlview({
-				viewName : "sap.ui.demo.salesui5.view.customersales"
-				)}.placeAt("content")
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+			sap.ui.xmlview({
+				viewName: "salesdemo.salesui5.view.View1"	
+				}).placeAt("content");
 			});
 		</script>
-		
 	</head>
 
 	<body class="sapUiBody" id="content">
-
+		<h1>Welcome to customer Registration page</h1>
 	</body>
 
 </html>

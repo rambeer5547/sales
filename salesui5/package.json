@@ -1,5 +1,5 @@
 {
-	"name": "salesui5-approuter",
+	"name": "salesdemo-approuter",
 	"engines": {
 		"node": ">=4.0.0 <9.0.0"
 	},

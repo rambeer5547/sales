@@ -1,7 +1,7 @@
 {
 	"_version": "1.5.0",
 	"sap.app": {
-		"id": "salesui5.salesui5",
+		"id": "salesdemo.salesui5",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -38,8 +38,8 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "salesui5.salesui5.view.customersales",
-			"type": "HTML"
+			"viewName": "salesdemo.salesui5.view.View1",
+			"type": "XML"
 		},
 		"dependencies": {
 			"minUI5Version": "1.30.0",
@@ -61,7 +61,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "salesui5.salesui5.i18n.i18n"
+					"bundleName": "salesdemo.salesui5.i18n.i18n"
 				}
 			}
 		},
@@ -75,7 +75,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "salesui5.salesui5.view",
+				"viewPath": "salesdemo.salesui5.view",
 				"controlAggregation": "pages",
 				"controlId": "idAppControl"
 			},
